@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    table.table th,
+    table.table td {
+      width: 11.11%; /* Each column takes equal width (100% / 9 columns) */
+    }
+    body{
+        font-family: 'Roboto', sans-serif;
+        font-size: medium;
+    }
+     /* Custom CSS to adjust 2nd and 3rd column width */
+    table.table th:nth-child(2),
+    table.table td:nth-child(2),
+    table.table th:nth-child(3),
+    table.table td:nth-child(3)
+     {
+      width: 15%; /* Adjust width of 2nd and 3rd columns */
+    }
+    table.table, 
+    table.table th {
+    border: 1px solid black; /* Set all borders to black */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h3>Reports</h3>
+
+    <div class="card mt-4">
+      <div class="card-body">
+        <form>
+          <div class="row mb-3">
+            <div class="col-auto">
+              <label for="filter" class="form-label">Filter by:</label>
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-primary">Daily sale</button>
+              <button type="button" class="btn btn-outline-secondary">Weekly sale</button>
+              <button type="button" class="btn btn-outline-secondary">Monthly sale</button>
+            </div>
+            <div class="col-auto">or</div>
+            <div class="col-auto">
+              <input type="date" class="form-control" />
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="fas fa-calendar-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-auto">
+              <input type="radio" id="completed" name="status" />
+              <label for="completed">Completed</label>
+            </div>
+            <div class="col-auto">
+              <input type="radio" id="incompleted" name="status" />
+              <label for="incompleted">In-completed</label>
+            </div>
+          </div>
+        </form>
+
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Invoice No</th>
+              <th>Initiated At</th>
+              <th>Completed At</th>
+              <th>Invoiced by</th>
+              <th>Invoiced to</th>
+              <th>Discount (LKR)</th>
+              <th>Net Amount (LKR)</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>INV00001</td>
+              <td>01-01-2021 07:45</td>
+              <td>02-01-2021 07:50</td>
+              <td>Mrs. Meha</td>
+              <td>Mrs Anna</td>
+              <td>25.00</td>
+              <td>1250.00</td>
+              <td>Completed</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>INV00002</td>
+              <td>01-01-2021 12:32</td>
+              <td>N/A</td>
+              <td>Mr. Ram</td>
+              <td>Mr. Anderson</td>
+              <td>5.00</td>
+              <td>250.00</td>
+              <td>Pending</td>
+              <td>complete</td>
+            </tr>
+            <tr>
+              <td>INV00003</td>
+              <td>01-01-2021 16:20</td>
+              <td>02-01-2021 16:35</td>
+              <td>Mrs. Meha</td>
+              <td>Mrs Anna</td>
+              <td>25.00</td>
+              <td>1250.00</td>
+              <td>Completed</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>INV00004</td>
+              <td>01-01-2021 16:20</td>
+              <td>02-01-2021 16:35</td>
+              <td>Mrs. Meha</td>
+              <td>Mrs Anna</td>
+              <td>100.00</td>
+              <td>9000.00</td>
+              <td>Returned</td>
+              <td> </td>
+            </tr>
+            <tr><td colspan="9">&nbsp;</td></tr>
+            <tr><td colspan="9">&nbsp;</td></tr>
+            <tr><td colspan="9">&nbsp;</td></tr>
+            <tr><td colspan="9">&nbsp;</td></tr>
+            <tr><td colspan="9">&nbsp;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
